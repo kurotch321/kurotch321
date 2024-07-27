@@ -2,7 +2,7 @@
 <h1 align="center">Hi 👋, I'm Katsunori</h1>
 <h3 align="center">Software Engineer from Japan.</h3>
 
-<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://ghprofiletrophy.neko-room.com/?username=nekodayo2222&theme=dracula&column=-1" alt="nekodayo2222" /></a> </p>
+<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://ghprofiletrophy.neko-room.com/?username=nekodayo2222&theme=dracula&column=-1" /></a> </p>
 
 - 🌱 I'm currently learning to become a [**Professional Cloud Network Engineer**](https://cloud.google.com/learn/certification/cloud-network-engineer)
 
