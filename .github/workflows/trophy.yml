@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Download Trophy
-        run: curl "${{ secrets.TROPHY_SERVER }}/?username=nekodayo2222&theme=dracula&column=-1" -o trophy.svg 
+        run: curl "${{ secrets.TROPHY_SERVER }}/?username=kurotch321&theme=dracula&column=-1" -o trophy.svg 
       - name: Setup Git
         run: |
           git config user.name trophy-kun[bot]
