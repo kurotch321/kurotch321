@@ -1,11 +1,7 @@
 <img src="https://raw.githubusercontent.com/BEPb/BEPb/5c63fa170d1cbbb0b1974f05a3dbe6aca3f5b7f3/assets/Bottom_up.svg" width="100%" />
 <h1 align="center">Hi 👋, I'm Katsunori</h1>
 <h3 align="center">Software Engineer from Japan.</h3>
-
 <p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://ghprofiletrophy.neko-room.com/?username=kurotch321&theme=dracula&column=-1" /></a> </p>
-
-- 🌱 I'm currently learning to become a [**Professional Cloud Network Engineer**](https://cloud.google.com/learn/certification/cloud-network-engineer)
-
 <div> <a href="https://github.com/kurotch321" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a>
 </div><h3 align="left">Languages and Tools:</h3>
 <p align="left">
