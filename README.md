@@ -99,5 +99,3 @@
     <img src="https://cdn-03.neko-room.com/1-repos-per-language.svg" align="center" />
     <img src="https://cdn-03.neko-room.com/2-most-commit-language.svg" align="center" />
 </div>
-
-![](https://hit.yhype.me/github/profile?user_id=99164438)
