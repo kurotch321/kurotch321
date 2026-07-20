@@ -52,3 +52,13 @@
 ```
 
     
+
+---
+
+![](./4-productive-time.svg)
+
+```
+![](https://raw.githubusercontent.com/kurotch321/kurotch321/master/profile-summary-card-output/solarized_dark/4-productive-time.svg)
+```
+
+    
