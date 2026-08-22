@@ -7,6 +7,8 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><h3 align="center">Statistics</h3>
 
 <div align="center">
+    <img src="https://cdn-03.neko-room.com/0-profile-details.svg" align="center" />
+    <br />
     <img src="https://cdn-03.neko-room.com/3-stats.svg" align="center" />
     <img src="https://cdn-03.neko-room.com/4-productive-time.svg" align="center" />
     <br />
