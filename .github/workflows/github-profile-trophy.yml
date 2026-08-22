@@ -4,10 +4,6 @@ on:
   schedule:
     - cron: "0 3 * * *"
   workflow_dispatch:
-  # TEMPORARY: remove once the first SVG has been generated on this branch.
-  push:
-    branches:
-      - claude/github-profile-trophy-deploy-6ue2gk
 
 concurrency:
   group: profile-trophy
