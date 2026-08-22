@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: "0 3 * * *"
   workflow_dispatch:
+  # TEMPORARY: remove once the first SVG has been generated on this branch.
+  push:
+    branches:
+      - claude/github-profile-trophy-deploy-6ue2gk
 
 concurrency:
   group: profile-trophy
@@ -15,6 +19,9 @@ jobs:
     name: generate-github-profile-trophy
     permissions:
       contents: write
+    env:
+      THEME: dracula
+      OUTPUT_PATH: profile-trophy-output/dracula.svg
 
     steps:
       - uses: actions/checkout@v4
@@ -23,20 +30,20 @@ jobs:
         uses: ryo-ma/github-profile-trophy@e3c89df995e92e67cdd4b2acaab9d974583dc1f7
         with:
           username: ${{ github.repository_owner }}
-          output_path: profile-trophy-output/tokyonight.svg
-          theme: tokyonight
+          output_path: ${{ env.OUTPUT_PATH }}
+          theme: ${{ env.THEME }}
           token: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
 
       - name: Verify generated SVG
         run: |
-          test -s profile-trophy-output/tokyonight.svg
-          grep -q "<svg" profile-trophy-output/tokyonight.svg
+          test -s "$OUTPUT_PATH"
+          grep -q "<svg" "$OUTPUT_PATH"
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile-trophy-output/tokyonight.svg
+          git add "$OUTPUT_PATH"
           if git diff --cached --quiet; then
             echo "Trophy unchanged, nothing to commit."
             exit 0
