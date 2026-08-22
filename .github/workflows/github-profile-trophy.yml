@@ -1,0 +1,49 @@
+name: GitHub-Profile-Trophy
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: profile-trophy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate-github-profile-trophy
+    permissions:
+      contents: write
+    env:
+      THEME: dracula
+      OUTPUT_PATH: profile-trophy-output/dracula.svg
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate trophy
+        uses: ryo-ma/github-profile-trophy@e3c89df995e92e67cdd4b2acaab9d974583dc1f7
+        with:
+          username: ${{ github.repository_owner }}
+          output_path: ${{ env.OUTPUT_PATH }}
+          theme: ${{ env.THEME }}
+          token: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
+
+      - name: Verify generated SVG
+        run: |
+          test -s "$OUTPUT_PATH"
+          grep -q "<svg" "$OUTPUT_PATH"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$OUTPUT_PATH"
+          if git diff --cached --quiet; then
+            echo "Trophy unchanged, nothing to commit."
+            exit 0
+          fi
+          git commit -m "Generate profile trophy"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin HEAD:"${{ github.ref_name }}"
